@@ -5,6 +5,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Dark mode transitions */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Disable transitions during theme change to prevent flash */
+.theme-transition {
+  transition: none !important;
+}
+
 /* Set Inter as the default body font */
 body {
   font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;

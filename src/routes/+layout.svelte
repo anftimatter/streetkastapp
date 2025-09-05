@@ -24,6 +24,28 @@
 				console.log('Inter loaded:', interLoaded);
 			});
 		}
+
+		// Set up automatic theme detection
+		function updateTheme() {
+			const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (isDark) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		}
+
+		// Initial theme setup
+		updateTheme();
+
+		// Listen for theme changes
+		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+		mediaQuery.addEventListener('change', updateTheme);
+
+		// Cleanup
+		return () => {
+			mediaQuery.removeEventListener('change', updateTheme);
+		};
 	});
 </script>
 
@@ -65,7 +87,8 @@
 	<!-- Additional SEO -->
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="Igor Riabchuk" />
-	<meta name="theme-color" content="#ea580c" />
+	<meta name="theme-color" content="#ea580c" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)" />
 	
 	<!-- Structured Data -->
 	<script type="application/ld+json">
@@ -99,7 +122,7 @@
 	</script>
 </svelte:head>
 
-<div class="min-h-screen bg-white">
+<div class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
 	<Navigation />
 	<main class="pt-16">
 		{@render children?.()}

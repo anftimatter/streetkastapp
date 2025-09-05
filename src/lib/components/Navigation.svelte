@@ -56,18 +56,17 @@
 
 <nav 
 	bind:this={navElement}
-	class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300"
-	style="background-color: rgba(255, 255, 255, {0.7 + backdropIntensity * 0.2}); 
-	       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, {0.05 + backdropIntensity * 0.05}), 0 2px 4px -1px rgba(0, 0, 0, {0.03 + backdropIntensity * 0.03});
-	       border-bottom: 1px solid rgba(229, 231, 235, {0.3 + backdropIntensity * 0.4});"
+	class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300 bg-white/70 dark:bg-gray-900/70 border-b border-gray-200/30 dark:border-gray-700/30"
+	style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, {0.05 + backdropIntensity * 0.05}), 0 2px 4px -1px rgba(0, 0, 0, {0.03 + backdropIntensity * 0.03});"
 >
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-between items-center h-16">
 			<!-- Logo -->
 			<div class="flex items-center {navLoaded ? 'animate-in' : 'animate-fade-in-left'}">
 				<a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-					<img src="/images/icons/sklogo_v3_black.svg" alt="StreetKast" class="h-8 w-auto" />
-					<span class="text-2xl font-semibold text-gray-900 font-display">StreetKast</span>
+					<img src="/images/icons/sklogo_v3_black.svg" alt="StreetKast" class="h-8 w-auto dark:hidden" />
+					<img src="/images/icons/sklogo_v3_white.svg" alt="StreetKast" class="h-8 w-auto hidden dark:block" />
+					<span class="text-2xl font-semibold text-gray-900 dark:text-white font-display">StreetKast</span>
 				</a>
 			</div>
 
@@ -77,19 +76,19 @@
 					<div class="ml-10 flex items-center space-x-8">
 						<button 
 							onclick={(e) => smoothScroll(e, 'about')}
-							class="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+							class="text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium"
 						>
 							About
 						</button>
 						<button 
 							onclick={(e) => smoothScroll(e, 'solution')}
-							class="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+							class="text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium"
 						>
 							Solution
 						</button>
 						<button 
 							onclick={(e) => smoothScroll(e, 'features')}
-							class="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+							class="text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors font-medium"
 						>
 							Features
 						</button>
@@ -108,7 +107,7 @@
 				<div class="md:hidden">
 					<button
 						onclick={toggleMenu}
-						class="text-gray-700 hover:text-orange-600 focus:outline-none focus:text-orange-600"
+						class="text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 focus:outline-none focus:text-orange-600 dark:focus:text-orange-400"
 						aria-label="Toggle menu"
 					>
 						<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -127,22 +126,22 @@
 	<!-- Mobile Navigation -->
 	{#if isMenuOpen && !isLegalPage}
 		<div class="md:hidden">
-			<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/90 backdrop-blur-md border-t border-gray-200/50">
+			<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-t border-gray-200/50 dark:border-gray-700/50">
 				<button 
 					onclick={(e) => smoothScroll(e, 'about')}
-					class="block w-full text-left px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-100 rounded-md font-medium transition-colors"
+					class="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md font-medium transition-colors"
 				>
 					About
 				</button>
 				<button 
 					onclick={(e) => smoothScroll(e, 'solution')}
-					class="block w-full text-left px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-100 rounded-md font-medium transition-colors"
+					class="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md font-medium transition-colors"
 				>
 					Solution
 				</button>
 				<button 
 					onclick={(e) => smoothScroll(e, 'features')}
-					class="block w-full text-left px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-100 rounded-md font-medium transition-colors"
+					class="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md font-medium transition-colors"
 				>
 					Features
 				</button>

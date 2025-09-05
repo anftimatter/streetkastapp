@@ -101,7 +101,7 @@
 >
 	{#each images as image, index}
 		<div class="flex-none snap-center animate-scale-in" style="transition-delay: {index * 50}ms">
-			<div class="transition-all duration-300 will-change-transform transform-gpu hover:scale-105 hover:drop-shadow-lg hover:z-10 relative">
+			<div class="carousel-image relative">
 				<LazyImage 
 					src={image.src} 
 					alt={image.alt} 
@@ -112,3 +112,17 @@
 		</div>
 	{/each}
 </div>
+
+<style>
+	.carousel-image {
+		transform: scale(1);
+		transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		will-change: transform;
+	}
+	
+	.carousel-image:hover {
+		transform: scale(1.05);
+		transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+</style>
+

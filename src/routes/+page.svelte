@@ -54,14 +54,14 @@
 </script>
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-br from-orange-50 to-teal-50 py-20 lg:py-32 overflow-hidden">
+<section class="bg-gradient-to-br from-orange-50 to-teal-50 dark:from-gray-900 dark:to-gray-800 py-20 lg:py-32 overflow-hidden">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center">
-			<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-display {heroLoaded ? 'animate-in' : 'animate-fade-in-up'}">
+			<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 font-display {heroLoaded ? 'animate-in' : 'animate-fade-in-up'}">
 				Connect <span class="text-orange-600">Talent</span> with<br />
 				<span class="text-teal-600">Filmmakers</span> & Creators
 			</h1>
-			<p class="text-xl lg:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto {heroLoaded ? 'animate-in' : 'animate-fade-in-up'} stagger-1">
+			<p class="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto {heroLoaded ? 'animate-in' : 'animate-fade-in-up'} stagger-1">
 				Audition anywhere, get discovered fast. The revolutionary platform that's changing how talent and creators connect.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center {heroLoaded ? 'animate-in' : 'animate-fade-in-up'} stagger-2">
@@ -73,7 +73,7 @@
 				</button>
 				<button 
 					onclick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-					class="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold border-2 border-gray-200 hover:border-gray-300 transition-all will-change-transform hover:shadow-sm"
+					class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white dark:text-white px-8 py-4 rounded-full text-lg font-semibold border-2 border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 transition-all will-change-transform hover:shadow-sm"
 				>
 					Learn More
 				</button>
@@ -83,62 +83,62 @@
 </section>
 
 <!-- Problem Statement -->
-<section id="about" class="py-20 bg-white">
+<section id="about" class="py-20 bg-white dark:bg-gray-800">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center mb-16 animate-fade-in-up">
-			<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-display">
+			<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-display">
 				The Industry Challenge
 			</h2>
-			<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
 				Traditional casting processes are inefficient, limiting opportunities for talent and making it difficult for creators to find the perfect fit.
 			</p>
 		</div>
 		
 		<div class="grid md:grid-cols-2 gap-12 items-center">
 			<div class="animate-fade-in-left">
-				<h3 class="text-2xl font-bold text-gray-900 mb-6 font-display">For Talent</h3>
+				<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 font-display">For Talent</h3>
 				<ul class="space-y-4">
 					<li class="flex items-start animate-fade-in-up stagger-1">
 						<div class="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
 							<div class="w-2 h-2 bg-orange-600 rounded-full"></div>
 						</div>
-						<p class="ml-4 text-gray-600">Limited casting opportunities in your area</p>
+						<p class="ml-4 text-gray-600 dark:text-gray-300">Limited casting opportunities in your area</p>
 					</li>
 					<li class="flex items-start animate-fade-in-up stagger-2">
 						<div class="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
 							<div class="w-2 h-2 bg-orange-600 rounded-full"></div>
 						</div>
-						<p class="ml-4 text-gray-600">Expensive travel costs for auditions</p>
+						<p class="ml-4 text-gray-600 dark:text-gray-300">Expensive travel costs for auditions</p>
 					</li>
 					<li class="flex items-start animate-fade-in-up stagger-3">
 						<div class="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
 							<div class="w-2 h-2 bg-orange-600 rounded-full"></div>
 						</div>
-						<p class="ml-4 text-gray-600">Long waiting periods for feedback</p>
+						<p class="ml-4 text-gray-600 dark:text-gray-300">Long waiting periods for feedback</p>
 					</li>
 				</ul>
 			</div>
 			
 			<div class="animate-fade-in-right">
-				<h3 class="text-2xl font-bold text-gray-900 mb-6 font-display">For Creators</h3>
+				<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 font-display">For Creators</h3>
 				<ul class="space-y-4">
 					<li class="flex items-start animate-fade-in-up stagger-1">
 						<div class="flex-shrink-0 w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center mt-1">
 							<div class="w-2 h-2 bg-teal-600 rounded-full"></div>
 						</div>
-						<p class="ml-4 text-gray-600">Time-consuming casting processes</p>
+						<p class="ml-4 text-gray-600 dark:text-gray-300">Time-consuming casting processes</p>
 					</li>
 					<li class="flex items-start animate-fade-in-up stagger-2">
 						<div class="flex-shrink-0 w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center mt-1">
 							<div class="w-2 h-2 bg-teal-600 rounded-full"></div>
 						</div>
-						<p class="ml-4 text-gray-600">Limited talent pool access</p>
+						<p class="ml-4 text-gray-600 dark:text-gray-300">Limited talent pool access</p>
 					</li>
 					<li class="flex items-start animate-fade-in-up stagger-3">
 						<div class="flex-shrink-0 w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center mt-1">
 							<div class="w-2 h-2 bg-teal-600 rounded-full"></div>
 						</div>
-						<p class="ml-4 text-gray-600">Inefficient review and selection process</p>
+						<p class="ml-4 text-gray-600 dark:text-gray-300">Inefficient review and selection process</p>
 					</li>
 				</ul>
 			</div>
@@ -147,13 +147,13 @@
 </section>
 
 <!-- Solution Section -->
-<section id="solution" class="py-20 bg-gray-50">
+<section id="solution" class="py-20 bg-gray-50 dark:bg-gray-900">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center mb-16 animate-fade-in-up">
-			<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-display">
+			<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-display">
 				Introducing <span class="text-orange-600">StreetKast</span>
 			</h2>
-			<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
 				A revolutionary mobile-first platform transforming talent discovery — create casting calls in seconds, send and receive video auditions instantly, and connect with actors, models, and creators worldwide through intelligent matching.
 			</p>
 		</div>
@@ -164,32 +164,32 @@
 		</div>
 		
 		<div class="grid lg:grid-cols-3 gap-8">
-			<div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-1 will-change-transform transform-gpu hover:scale-105">
+			<div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-1 will-change-transform transform-gpu hover:scale-105">
 				<div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-6">
 					<div class="w-6 h-6 bg-orange-600 rounded-full"></div>
 				</div>
-				<h3 class="text-xl font-bold text-gray-900 mb-4 font-display">Smart Matching</h3>
-				<p class="text-gray-600">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-display">Smart Matching</h3>
+				<p class="text-gray-600 dark:text-gray-300">
 					Our system matches talent with the perfect opportunities based on location, attributes and project requirements.
 				</p>
 			</div>
 			
-			<div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-2 will-change-transform transform-gpu hover:scale-105">
+			<div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-2 will-change-transform transform-gpu hover:scale-105">
 				<div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-6">
 					<div class="w-6 h-6 bg-teal-600 rounded-full"></div>
 				</div>
-				<h3 class="text-xl font-bold text-gray-900 mb-4 font-display">Video Auditions</h3>
-				<p class="text-gray-600">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-display">Video Auditions</h3>
+				<p class="text-gray-600 dark:text-gray-300">
 					Submit and receive video auditions from anywhere, eliminating travel costs and geographical barriers.
 				</p>
 			</div>
 			
-			<div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-3 will-change-transform transform-gpu hover:scale-105">
+			<div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-3 will-change-transform transform-gpu hover:scale-105">
 				<div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-6">
 					<div class="w-6 h-6 bg-orange-600 rounded-full"></div>
 				</div>
-				<h3 class="text-xl font-bold text-gray-900 mb-4 font-display">Instant Feedback</h3>
-				<p class="text-gray-600">
+				<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-display">Instant Feedback</h3>
+				<p class="text-gray-600 dark:text-gray-300">
 					Get real-time notifications and feedback from casting directors, speeding up the entire casting process.
 				</p>
 			</div>
@@ -198,13 +198,13 @@
 </section>
 
 <!-- User Modes Section -->
-<section id="features" class="py-20 bg-white">
+<section id="features" class="py-20 bg-white dark:bg-gray-800">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center mb-16 animate-fade-in-up">
-			<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-display">
+			<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-display">
 				Two Powerful Modes
 			</h2>
-			<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
 				Whether you're talent looking for opportunities or a creator seeking the perfect cast, StreetKast has you covered.
 			</p>
 		</div>
@@ -220,10 +220,10 @@
 					</div>
 					<div class="text-left">
 						<span class="text-xs font-semibold text-orange-600 tracking-widest uppercase font-display mb-2 block">TALENT MODE</span>
-						<h3 class="text-2xl lg:text-3xl font-bold text-gray-900 font-display leading-tight">Perfect Tool for<br />Actors & Models</h3>
+						<h3 class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white font-display leading-tight">Perfect Tool for<br />Actors & Models</h3>
 					</div>
 				</div>
-				<p class="text-lg text-gray-600 mb-8">
+				<p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
 					Looking for your next opportunity? Our talent mode gives you everything you need to showcase your skills and connect with industry professionals.
 				</p>
 				
@@ -244,8 +244,8 @@
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 						</svg>
 						<div>
-							<p class="font-semibold text-gray-900">Create comprehensive profiles</p>
-							<p class="text-sm text-gray-600">Showcase your detailed attributes and skills</p>
+							<p class="font-semibold text-gray-900 dark:text-white">Create comprehensive profiles</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300">Showcase your detailed attributes and skills</p>
 						</div>
 					</li>
 					<li class="flex items-start">
@@ -253,8 +253,8 @@
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 						</svg>
 						<div>
-							<p class="font-semibold text-gray-900">Browse & apply for matching roles</p>
-							<p class="text-sm text-gray-600">Find opportunities that match your skills and characteristics</p>
+							<p class="font-semibold text-gray-900 dark:text-white">Browse & apply for matching roles</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300">Find opportunities that match your skills and characteristics</p>
 						</div>
 					</li>
 					<li class="flex items-start">
@@ -262,8 +262,8 @@
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 						</svg>
 						<div>
-							<p class="font-semibold text-gray-900">Upload video auditions effortlessly</p>
-							<p class="text-sm text-gray-600">Record within the app with scripts displayed on-screen</p>
+							<p class="font-semibold text-gray-900 dark:text-white">Upload video auditions effortlessly</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300">Record within the app with scripts displayed on-screen</p>
 						</div>
 					</li>
 					<li class="flex items-start">
@@ -271,8 +271,8 @@
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 						</svg>
 						<div>
-							<p class="font-semibold text-gray-900">Get direct messages & invites</p>
-							<p class="text-sm text-gray-600">Connect directly with StreetKasters and creators</p>
+							<p class="font-semibold text-gray-900 dark:text-white">Get direct messages & invites</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300">Connect directly with StreetKasters and creators</p>
 						</div>
 					</li>
 					<li class="flex items-start">
@@ -280,8 +280,8 @@
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 						</svg>
 						<div>
-							<p class="font-semibold text-gray-900">Track application status</p>
-							<p class="text-sm text-gray-600">Real-time updates on your submissions</p>
+							<p class="font-semibold text-gray-900 dark:text-white">Track application status</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300">Real-time updates on your submissions</p>
 						</div>
 					</li>
 				</ul>
@@ -297,10 +297,10 @@
 					</div>
 					<div class="text-left">
 						<span class="text-xs font-semibold text-teal-600 tracking-widest uppercase font-display mb-2 block">STREETKASTER MODE</span>
-						<h3 class="text-2xl lg:text-3xl font-bold text-gray-900 font-display leading-tight">Ultimate Talent<br />Discovery Solution</h3>
+						<h3 class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white font-display leading-tight">Ultimate Talent<br />Discovery Solution</h3>
 					</div>
 				</div>
-				<p class="text-lg text-gray-600 mb-8">
+				<p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
 					For content creators seeking fresh talent beyond traditional databases. Streamline your casting process and discover exceptional performers.
 				</p>
 				
@@ -321,8 +321,8 @@
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 						</svg>
 						<div>
-							<p class="font-semibold text-gray-900">Post casting calls with specific requirements</p>
-							<p class="text-sm text-gray-600">Define exactly what you're looking for in your next talent</p>
+							<p class="font-semibold text-gray-900 dark:text-white">Post casting calls with specific requirements</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300">Define exactly what you're looking for in your next talent</p>
 						</div>
 					</li>
 					<li class="flex items-start">
@@ -330,8 +330,8 @@
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 						</svg>
 						<div>
-							<p class="font-semibold text-gray-900">Access diverse pool of fresh talent</p>
-							<p class="text-sm text-gray-600">Beyond traditional databases - discover new faces</p>
+							<p class="font-semibold text-gray-900 dark:text-white">Access diverse pool of fresh talent</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300">Beyond traditional databases - discover new faces</p>
 						</div>
 					</li>
 					<li class="flex items-start">
@@ -339,8 +339,8 @@
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 						</svg>
 						<div>
-							<p class="font-semibold text-gray-900">Review video auditions efficiently</p>
-							<p class="text-sm text-gray-600">Manage applications with powerful tools</p>
+							<p class="font-semibold text-gray-900 dark:text-white">Review video auditions efficiently</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300">Manage applications with powerful tools</p>
 						</div>
 					</li>
 					<li class="flex items-start">
@@ -348,8 +348,8 @@
 							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 						</svg>
 						<div>
-							<p class="font-semibold text-gray-900">Filter by location, skills & attributes</p>
-							<p class="text-sm text-gray-600">Find exactly the right fit for your project</p>
+							<p class="font-semibold text-gray-900 dark:text-white">Filter by location, skills & attributes</p>
+							<p class="text-sm text-gray-600 dark:text-gray-300">Find exactly the right fit for your project</p>
 						</div>
 					</li>
 				</ul>
@@ -411,35 +411,35 @@
 
 
 <!-- Personal Story Section -->
-<section class="py-20 bg-gradient-to-r from-orange-50 to-teal-50">
+<section class="py-20 bg-gradient-to-r from-orange-50 to-teal-50 dark:from-gray-900 dark:to-gray-800">
 	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-		<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 font-display animate-fade-in-up">
+		<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-8 font-display animate-fade-in-up">
 			Building in Public
 		</h2>
-		<div class="bg-white p-8 lg:p-12 rounded-2xl shadow-lg animate-scale-in text-left">
+		<div class="bg-white dark:bg-gray-700 p-8 lg:p-12 rounded-2xl shadow-lg animate-scale-in text-left">
 			<div class="flex items-center space-x-4 mb-6">
 				<LazyImage 
 					src="/images/team/avatar_street_small_square.jpg" 
 					alt="Igor Riabchuk, StreetKast Founder" 
-					class="w-20 h-20 rounded-full object-cover border-4 border-orange-100 flex-shrink-0"
+					class="w-20 h-20 rounded-full object-cover border-4 border-orange-100 dark:border-gray-600 flex-shrink-0"
 				/>
 				<div>
-					<h3 class="text-xl font-bold text-gray-900 mb-1 font-display">Igor Riabchuk</h3>
-					<p class="text-gray-500 text-sm">Creator & Solo Developer</p>
+					<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 font-display">Igor Riabchuk</h3>
+					<p class="text-gray-500 dark:text-gray-400 text-sm">Creator & Solo Developer</p>
 				</div>
 			</div>
-			<p class="text-gray-600 text-lg mb-6">
+			<p class="text-gray-600 dark:text-gray-300 text-lg mb-6">
 				For years, working as a freelance director, I kept running into the same headache—casting was a total nightmare. The databases I relied on were often out of date, the headshots didn't match the person who showed up, and it just felt like I was guessing in the dark.
 			</p>
-			<p class="text-gray-600 text-lg mb-6">
+			<p class="text-gray-600 dark:text-gray-300 text-lg mb-6">
 				That frustration stuck with me, and eventually, it sparked an idea - <strong>StreetKast.</strong> I couldn't shake it; for over five years, it was always in the back of my mind. Through client gigs, burnout, and way too many late nights, I held onto it. I started saving every bit of money I could until I finally had enough to bring on a small team and build the first version of the app.			</p>
-			<p class="text-gray-600 text-lg mb-6">
+			<p class="text-gray-600 dark:text-gray-300 text-lg mb-6">
 				We kicked things off with what was in front of us - an iPhone app, simply because that's the phone I had. It wasn't until later that I realized most actors were using Androids. Every new feature we wanted to add came with a cost, and every experiment drained more of our limited budget. I even turned to Indiegogo to raise extra funds, but it still wasn't enough to start over from scratch.
 			</p>
-			<p class="text-gray-600 text-lg mb-6">
+			<p class="text-gray-600 dark:text-gray-300 text-lg mb-6">
 				Then, just as StreetKast started getting some traction, everything in my life got flipped upside down. A terrorist state known as russia invaded my home country, Ukraine, and I had to move my family to Amsterdam. When I finally got back to working on the app, I found it broken. iOS updates had caused major bugs, and my team, scattered by the circumstances, couldn't fix it.
 			</p>
-			<p class="text-gray-600 text-lg mb-6">
+			<p class="text-gray-600 dark:text-gray-300 text-lg mb-6">
 				But one day, while listening to a podcast about coding with AI, something clicked. Why wait for someone else to step in? Why not rebuild StreetKast myself?
 			</p>
 			<p class="text-orange-600 text-lg mb-6">
