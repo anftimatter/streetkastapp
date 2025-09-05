@@ -1,0 +1,200 @@
+@import 'tailwindcss';
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set Inter as the default body font */
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Ensure Raleway is properly loaded for display elements */
+.font-display {
+  font-family: 'Raleway', ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* Fallback font loading check */
+.font-display::before {
+  content: '';
+  font-family: 'Raleway';
+}
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Enhanced backdrop filter support for older browsers */
+@supports not (backdrop-filter: blur(12px)) {
+  .backdrop-blur-md {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Modern Loading and Animation Styles */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Modern Animation Classes with Performance Optimizations */
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-fade-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-fade-in-right {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.4s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.animate-scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.4s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Immediate trigger class for animations */
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) scale(1) !important;
+  will-change: auto !important;
+}
+
+/* Loading Skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Optimized Stagger Animation Delays - Much Shorter */
+.stagger-1 { transition-delay: 50ms; }
+.stagger-2 { transition-delay: 100ms; }
+.stagger-3 { transition-delay: 150ms; }
+.stagger-4 { transition-delay: 200ms; }
+.stagger-5 { transition-delay: 250ms; }
+.stagger-6 { transition-delay: 300ms; }
+
+@theme {
+  /* Custom Font Families */
+  --font-family-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family-display: 'Raleway', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  
+  /* Animation Performance Variables */
+  --animation-duration-fast: 0.15s;
+  --animation-duration-normal: 0.3s;
+  --animation-duration-slow: 0.4s;
+  --animation-easing: cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Shadow Scale (v4 naming) */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-base: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  /* StreetKast Orange Colors */
+  --color-orange-50: oklch(97.5% 0.025 64.88);
+  --color-orange-100: oklch(94% 0.1518 64.88);
+  --color-orange-200: oklch(88% 0.1518 64.88);
+  --color-orange-300: oklch(84% 0.1518 64.88);
+  --color-orange-400: oklch(82% 0.1518 64.88);
+  --color-orange-500: oklch(79% 0.1518 64.88);
+  --color-orange-600: oklch(76% 0.1518 64.88);
+  --color-orange-700: oklch(55% 0.1518 64.88);
+  --color-orange-800: oklch(48% 0.1518 64.88);
+  --color-orange-900: oklch(42% 0.1518 64.88);
+  --color-orange-950: oklch(28% 0.1518 64.88);
+
+  /* Cold Teal Colors */
+  --color-teal-50: oklch(97.5% 0.025 224.79);
+  --color-teal-100: oklch(94% 0.07456 224.79);
+  --color-teal-200: oklch(88% 0.07456 224.79);
+  --color-teal-300: oklch(72% 0.07456 224.79);
+  --color-teal-400: oklch(55% 0.07456 224.79);
+  --color-teal-500: oklch(49% 0.07456 224.79);
+  --color-teal-600: oklch(39% 0.07456 224.79);
+  --color-teal-700: oklch(37% 0.07456 224.79);
+  --color-teal-800: oklch(35% 0.07456 224.79);
+  --color-teal-900: oklch(32% 0.07456 224.79);
+  --color-teal-950: oklch(28% 0.07456 224.79);
+}
