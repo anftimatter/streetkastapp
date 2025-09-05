@@ -460,7 +460,7 @@
 					<span class="text-2xl text-white font-semibold font-display">StreetKast</span>
 				</div>
 				<p class="text-gray-400 mb-6 max-w-md">
-					Revolutionizing talent discovery through video auditions and intelligent matching. Connect talent with creators anywhere, anytime.
+					Eliminating casting gatekeepers through direct creator-to-talent connections. Creators post instantly, talent auditions anywhere, matches happen in real-time.
 				</p>
 				<div class="flex space-x-4">
 					<!-- Instagram -->
