@@ -55,9 +55,47 @@
 		};
 	});
 
+	// Mouse drag functionality for desktop
+	let isDragging = false;
+	let startX = 0;
+	let scrollLeft = 0;
+
+	function onMouseDown(e: MouseEvent) {
+		isDragging = true;
+		carouselElement.style.cursor = 'grabbing';
+		startX = e.pageX - carouselElement.offsetLeft;
+		scrollLeft = carouselElement.scrollLeft;
+		e.preventDefault();
+	}
+
+	function onMouseMove(e: MouseEvent) {
+		if (!isDragging) return;
+		e.preventDefault();
+		const x = e.pageX - carouselElement.offsetLeft;
+		const walk = (x - startX) * 2; // Multiply by 2 for faster scrolling
+		carouselElement.scrollLeft = scrollLeft - walk;
+	}
+
+	function onMouseUp() {
+		isDragging = false;
+		carouselElement.style.cursor = 'grab';
+	}
+
+	function onMouseLeave() {
+		isDragging = false;
+		carouselElement.style.cursor = 'grab';
+	}
+
 </script>
 
-<div bind:this={carouselElement} class="flex gap-8 py-8 snap-x snap-mandatory scrollbar-hide px-8 overflow-x-auto overflow-y-hidden {className}">
+<div 
+	bind:this={carouselElement} 
+	class="flex gap-8 py-8 snap-x snap-mandatory scrollbar-hide px-8 overflow-x-auto overflow-y-hidden cursor-grab select-none {className}"
+	on:mousedown={onMouseDown}
+	on:mousemove={onMouseMove}
+	on:mouseup={onMouseUp}
+	on:mouseleave={onMouseLeave}
+>
 	{#each images as image, index}
 		<div class="flex-none snap-center animate-scale-in" style="transition-delay: {index * 50}ms">
 			<div class="transition-all duration-300 will-change-transform transform-gpu hover:scale-105 hover:drop-shadow-lg hover:z-10 relative">
