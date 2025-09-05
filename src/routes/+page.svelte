@@ -211,7 +211,7 @@
 		
 		<div class="grid lg:grid-cols-2 gap-16">
 			<!-- Talent Mode -->
-			<div class="animate-fade-in-left">
+			<div class="animate-fade-in-left text-center lg:text-left">
 				<div class="flex items-start justify-center lg:justify-start mb-6">
 					<div class="bg-orange-100 w-20 h-20 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0 mt-1">
 						<svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
@@ -223,7 +223,7 @@
 						<h3 class="text-2xl lg:text-3xl font-bold text-gray-900 font-display leading-tight">Perfect Tool for<br />Actors & Models</h3>
 					</div>
 				</div>
-				<p class="text-lg text-gray-600 mb-8 text-center lg:text-left">
+				<p class="text-lg text-gray-600 mb-8">
 					Looking for your next opportunity? Our talent mode gives you everything you need to showcase your skills and connect with industry professionals.
 				</p>
 				
@@ -288,7 +288,7 @@
 			</div>
 			
 			<!-- StreetKaster Mode -->
-			<div class="animate-fade-in-right">
+			<div class="animate-fade-in-right text-center lg:text-left">
 				<div class="flex items-start justify-center lg:justify-start mb-6">
 					<div class="bg-teal-100 w-20 h-20 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0 mt-1">
 						<svg class="w-8 h-8 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
@@ -300,7 +300,7 @@
 						<h3 class="text-2xl lg:text-3xl font-bold text-gray-900 font-display leading-tight">Ultimate Talent<br />Discovery Solution</h3>
 					</div>
 				</div>
-				<p class="text-lg text-gray-600 mb-8 text-center lg:text-left">
+				<p class="text-lg text-gray-600 mb-8">
 					For content creators seeking fresh talent beyond traditional databases. Streamline your casting process and discover exceptional performers.
 				</p>
 				

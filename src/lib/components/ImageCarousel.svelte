@@ -56,7 +56,7 @@
 	});
 </script>
 
-<div bind:this={carouselElement} class="flex gap-8 overflow-x-auto py-8 snap-x snap-mandatory scrollbar-hide px-8 touch-pan-x overscroll-x-contain overscroll-y-none {className}" style="touch-action: pan-x;">
+<div bind:this={carouselElement} class="flex gap-8 py-8 snap-x snap-mandatory scrollbar-hide px-8 carousel-container {className}">
 	{#each images as image, index}
 		<div class="flex-none snap-center animate-scale-in" style="transition-delay: {index * 50}ms">
 			<div class="transition-all duration-300 will-change-transform transform-gpu hover:scale-105 hover:drop-shadow-lg hover:z-10 relative">
