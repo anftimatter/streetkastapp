@@ -63,6 +63,7 @@
 	function onMouseDown(e: MouseEvent) {
 		isDragging = true;
 		carouselElement.style.cursor = 'grabbing';
+		carouselElement.style.scrollBehavior = 'auto'; // Disable smooth scrolling during drag
 		startX = e.pageX - carouselElement.offsetLeft;
 		scrollLeft = carouselElement.scrollLeft;
 		e.preventDefault();
@@ -72,18 +73,20 @@
 		if (!isDragging) return;
 		e.preventDefault();
 		const x = e.pageX - carouselElement.offsetLeft;
-		const walk = (x - startX) * 2; // Multiply by 2 for faster scrolling
+		const walk = (x - startX) * 1; // 1:1 ratio for smooth dragging
 		carouselElement.scrollLeft = scrollLeft - walk;
 	}
 
 	function onMouseUp() {
 		isDragging = false;
 		carouselElement.style.cursor = 'grab';
+		carouselElement.style.scrollBehavior = 'smooth'; // Re-enable smooth scrolling
 	}
 
 	function onMouseLeave() {
 		isDragging = false;
 		carouselElement.style.cursor = 'grab';
+		carouselElement.style.scrollBehavior = 'smooth'; // Re-enable smooth scrolling
 	}
 
 </script>
