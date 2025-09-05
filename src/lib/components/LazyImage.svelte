@@ -84,9 +84,9 @@
 	}
 </script>
 
-<div bind:this={containerElement} class="relative {className}">
+<div bind:this={containerElement} class="relative">
 	{#if skeleton && !loaded && !error}
-		<div class="skeleton w-full h-full rounded-lg animate-pulse bg-gray-200"></div>
+		<div class="skeleton w-full h-full rounded-lg animate-pulse bg-gray-200 {className}"></div>
 	{/if}
 	
 	{#if loading && !skeleton}

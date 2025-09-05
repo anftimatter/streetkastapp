@@ -30,15 +30,6 @@ body {
   display: none;  /* Safari and Chrome */
 }
 
-/* Enhanced mobile touch scrolling for carousels */
-.carousel-container {
-  touch-action: pan-x;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-x: contain;
-  overscroll-behavior-y: auto;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
 
 /* Enhanced backdrop filter support for older browsers */
 @supports not (backdrop-filter: blur(12px)) {
