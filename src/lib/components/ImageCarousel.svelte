@@ -94,10 +94,12 @@
 <div 
 	bind:this={carouselElement} 
 	class="flex gap-8 py-8 snap-x snap-mandatory scrollbar-hide px-8 overflow-x-auto overflow-y-hidden cursor-grab select-none {className}"
-	on:mousedown={onMouseDown}
-	on:mousemove={onMouseMove}
-	on:mouseup={onMouseUp}
-	on:mouseleave={onMouseLeave}
+	role="img"
+	aria-label="Image carousel - drag to scroll"
+	onmousedown={onMouseDown}
+	onmousemove={onMouseMove}
+	onmouseup={onMouseUp}
+	onmouseleave={onMouseLeave}
 >
 	{#each images as image, index}
 		<div class="flex-none snap-center animate-scale-in" style="transition-delay: {index * 50}ms">

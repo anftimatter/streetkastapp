@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
-	let { children, data } = $props();
+	let { children, data }: { children: any; data: any } = $props();
 
 	// SEO data with fallbacks
 	const seoTitle = $derived(data?.seo?.title || 'StreetKast - Connect Talent with Filmmakers & Creators');
@@ -56,7 +56,7 @@
 	
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 	
 	<!-- SEO Meta Tags -->

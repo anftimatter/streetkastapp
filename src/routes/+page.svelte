@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { createScrollAnimations } from '$lib/utils/animations';
 	import { preloadCriticalRoutes, setupHoverPreloading, setupVisibilityPreloading } from '$lib/utils/preloading';
@@ -6,9 +6,9 @@
 	import ImageCarousel from '$lib/components/ImageCarousel.svelte';
 	import BetaModal from '$lib/components/BetaModal.svelte';
 
-	let scrollAnimations;
+	let scrollAnimations: any;
 	let heroLoaded = $state(false);
-	let betaModal;
+	let betaModal: any;
 
 	// Screenshot data
 	const screenshots = [
@@ -285,6 +285,43 @@
 						</div>
 					</li>
 				</ul>
+				
+				<!-- Talent Mode Pricing Section -->
+				<div class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-2xl">
+					<h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 font-display">Talent Mode Pricing</h4>
+					<div class="grid sm:grid-cols-2 gap-4">
+						<!-- Free Plan -->
+						<div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+							<div class="text-center">
+								<h5 class="font-semibold text-gray-900 dark:text-white mb-2">Free</h5>
+								<div class="text-2xl font-bold text-gray-900 dark:text-white mb-3">€0</div>
+								<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+									<li class="flex items-center justify-center">
+										<svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+										</svg>
+										3 auditions per month
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Talent Pro Plan -->
+						<div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-orange-500">
+							<div class="text-center">
+								<h5 class="font-semibold text-gray-900 dark:text-white mb-2">Talent Pro</h5>
+								<div class="text-2xl font-bold text-orange-600 mb-3">€4.99<span class="text-sm text-gray-500">/month</span></div>
+								<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+									<li class="flex items-center justify-center">
+										<svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+										</svg>
+										Unlimited auditions
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			
 			<!-- StreetKaster Mode -->
@@ -353,6 +390,76 @@
 						</div>
 					</li>
 				</ul>
+				
+				<!-- StreetKaster Mode Pricing Section -->
+				<div class="bg-teal-50 dark:bg-teal-900/20 p-6 rounded-2xl">
+					<h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 font-display">StreetKaster Mode Pricing</h4>
+					<div class="grid lg:grid-cols-3 gap-4">
+						<!-- Free Plan -->
+						<div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+							<div class="text-center">
+								<h5 class="font-semibold text-gray-900 dark:text-white mb-2">Free</h5>
+								<div class="text-2xl font-bold text-gray-900 dark:text-white mb-3">€0</div>
+								<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2 text-left">
+									<li class="flex items-start">
+										<svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+										</svg>
+										1 project
+									</li>
+									<li class="flex items-start">
+										<svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+										</svg>
+										Up to 2 characters (casting calls)
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- StreetKaster Pro Plan -->
+						<div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-teal-500">
+							<div class="text-center">
+								<h5 class="font-semibold text-gray-900 dark:text-white mb-2">StreetKaster Pro</h5>
+								<div class="text-2xl font-bold text-teal-600 mb-3">€19.99<span class="text-sm text-gray-500">/month</span></div>
+								<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2 text-left">
+									<li class="flex items-start">
+										<svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+										</svg>
+										3 projects
+									</li>
+									<li class="flex items-start">
+										<svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+										</svg>
+										Up to 12 characters total
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- StreetKaster Enterprise Plan -->
+						<div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+							<div class="text-center">
+								<h5 class="font-semibold text-gray-900 dark:text-white mb-2">StreetKaster Enterprise</h5>
+								<div class="text-2xl font-bold text-teal-600 mb-3">€49.99<span class="text-sm text-gray-500">/month</span></div>
+								<ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2 text-left">
+									<li class="flex items-start">
+										<svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+										</svg>
+										Unlimited projects
+									</li>
+									<li class="flex items-start">
+										<svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+										</svg>
+										Unlimited characters
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -426,6 +533,7 @@
 				<div>
 					<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 font-display">Igor Riabchuk</h3>
 					<p class="text-gray-500 dark:text-gray-400 text-sm">Creator & Solo Developer</p>
+					<a href="https://thatukrainianguy.rocks" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:text-orange-700 text-sm transition-colors font-medium">thatukrainianguy.rocks</a>
 				</div>
 			</div>
 			<p class="text-gray-600 dark:text-gray-300 text-lg mb-6">
